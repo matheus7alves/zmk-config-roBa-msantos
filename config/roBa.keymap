@@ -57,7 +57,7 @@
         del {
             bindings = <&kp DELETE>;
             key-positions = <16 17>;
-            layers = <0 3 7 4 5 6 1>;
+            layers = <0 3 7 5 6 6 1>;
         };
     };
 
@@ -87,9 +87,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W    &kp E             &kp R         &kp T                                             &kp Y            &kp U  &lt 6 I    &kp O    &kp P
-&kp A             &kp S    &kp D             &kp F         &kp G             &mkp MB1         &kp BACKSPACE  &kp H            &kp J  &kp K      &kp L    &kp SQT
+&kp A             &kp S    &kp D             &kp F         &kp G             &mkp MB1         &kp BACKSPACE  &kp H            &kp J  &kp K      &kp L    &kp SEMI
 &mt LEFT_SHIFT Z  &kp X    &kp C             &kp V         &kp B             &kp TILDE        &kp APOS       &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp ESCAPE        &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE      &lt 2 MINUS    &kp RIGHT_SHIFT                             &kp DEL
+&kp ESCAPE        &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE      &lt 2 MINUS    &kp RIGHT_SHIFT                             &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
@@ -106,11 +106,13 @@
 
         Signs {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                   &kp CARET  &kp AMPERSAND  &kp ASTERISK  &trans  &trans
+&kp AT           &trans  &trans    &trans      &trans       &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &trans     &trans         &trans        &trans  &trans
+&trans           &trans  &trans    &trans      &trans       &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &trans     &trans         &trans        &trans  &trans
+&trans           &trans  &trans    &trans      &trans       &trans                    &trans                 &trans                                          &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         NUM {
@@ -157,6 +159,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
