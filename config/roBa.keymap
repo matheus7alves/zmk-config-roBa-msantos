@@ -29,11 +29,6 @@
     combos {
         compatible = "zmk,combos";
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
@@ -44,10 +39,9 @@
             key-positions = <24 25>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
-            key-positions = <41 29>;
-            layers = <0 3 1>;
+        hifen {
+            bindings = <&kp MINUS>;
+            key-positions = <30 31>;
         };
     };
 
@@ -76,10 +70,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W    &kp E             &kp R         &kp T                                           &kp Y          &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S    &kp D             &kp F         &kp G             &mkp RCLK        &kp TILDE    &kp H          &kp J  &kp K      &kp L    &kp SEMI
-&mt LEFT_SHIFT Z  &kp X    &kp C             &kp V         &kp B             &mkp LCLK        &lt 3 APOS   &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp ESCAPE        &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE      &lt 2 MINUS  &kp BACKSPACE                             &kp ENTER
+&kp Q             &kp W    &kp E             &kp R         &kp T                                            &kp Y          &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S    &kp D             &kp F         &kp G             &mkp MB2         &kp TILDE     &kp H          &kp J  &kp K      &kp L    &kp SEMI
+&mt LEFT_SHIFT Z  &kp X    &kp C             &kp V         &kp B             &mkp MB1         &lt 3 APOS    &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp ESCAPE        &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE      &lt 2 DELETE  &kp BACKSPACE                             &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
